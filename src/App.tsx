@@ -1,5 +1,5 @@
 import './App.css';
-import PokeList from './infrastructure/components/pokeList';
+import PokeList from './infrastructure/components/pokeList/pokeList';
 import './App.css';
 import { Header } from './infrastructure/components/header/header';
 
