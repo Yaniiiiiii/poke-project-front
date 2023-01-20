@@ -1,11 +1,15 @@
 import './App.css';
 import PokeList from './infrastructure/components/pokeList';
+import { Header } from '../header/header';
+import './App.css';
 
 function App() {
     return (
-        <div className="App">
+        <>
+            <Header></Header>
             <PokeList></PokeList>
-        </div>
+            <div>Pokemon</div>
+        </>
     );
 }
 
