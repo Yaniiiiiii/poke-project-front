@@ -1,14 +1,12 @@
 import './App.css';
-import PokeList from './infrastructure/components/pokeList/pokeList';
-import './App.css';
 import { Header } from './infrastructure/components/header/header';
+import AppRoutes from './infrastructure/routes/routes';
 
 function App() {
     return (
         <>
             <Header></Header>
-            <PokeList></PokeList>
-            <div>Pokemon</div>
+            <AppRoutes></AppRoutes>
         </>
     );
 }
