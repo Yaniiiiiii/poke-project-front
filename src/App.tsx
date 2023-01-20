@@ -1,7 +1,7 @@
 import './App.css';
 import PokeList from './infrastructure/components/pokeList';
-import { Header } from '../header/header';
 import './App.css';
+import { Header } from './infrastructure/components/header/header';
 
 function App() {
     return (
