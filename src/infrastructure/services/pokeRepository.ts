@@ -1,20 +1,27 @@
-import Pokemon from '../types/pokeType';
+import Pokemon, { PokeInitial } from '../types/pokeType';
 
-export async function pokeRepo() {
+export async function fetchPokemons(): Promise<PokeInitial[]> {
     const response = await fetch(
         'https://unpkg.com/pokemons@1.1.0/pokemons.json'
     );
+
     if (!response.ok) {
-        throw new Error('Failed to fetch Pokemon');
+        throw new Error('Failed to fetch');
     }
+
     const result = await response.json();
 
-    const pokemons = result.results.map((pokemon: any) => ({
+    const pokemons = result.results.map((pokemon: Pokemon) => ({
         name: pokemon.name,
         id: pokemon.national_number,
-        imagen: `https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name}.gif`,
+        imgSrc: pokemon.sprites.normal.toLowerCase(),
     }));
-    console.log(pokemons);
 
-    return pokemons; //const uniquePokemons= pokemos.filter((pokemon:any, index: number)=>pokemons.findIndex(()))
+    const notRepeteatedPokemons = pokemons.filter(
+        (pokemon: any, index: number) =>
+            pokemons.findIndex((other: any) => other.id === pokemon.id) ===
+            index
+    );
+
+    return notRepeteatedPokemons;
 }
