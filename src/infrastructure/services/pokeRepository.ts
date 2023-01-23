@@ -18,9 +18,10 @@ export async function fetchPokemons(): Promise<PokeInitial[]> {
     }));
 
     const notRepeteatedPokemons = pokemons.filter(
-        (pokemon: any, index: number) =>
-            pokemons.findIndex((other: any) => other.id === pokemon.id) ===
-            index
+        (pokemon: PokeInitial, index: number) =>
+            pokemons.findIndex(
+                (other: PokeInitial) => other.id === pokemon.id
+            ) === index
     );
 
     return notRepeteatedPokemons;

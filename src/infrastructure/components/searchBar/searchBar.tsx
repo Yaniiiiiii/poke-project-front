@@ -3,8 +3,8 @@ import { fetchPokemons } from '../../services/pokeRepository';
 
 function SearchBar() {
     const initialState = '';
+
     const [query, setQuery] = useState(initialState);
-    const [pokemons, setPokemons] = useState();
 
     const handleInput = (event: any) => {
         event.preventDefault();
@@ -19,4 +19,5 @@ function SearchBar() {
         </form>
     );
 }
+
 export default SearchBar;
