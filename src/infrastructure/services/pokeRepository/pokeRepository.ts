@@ -1,4 +1,4 @@
-import { PokeInitial, Pokemon } from '../types/pokeType';
+import { PokeInitial, Pokemon } from '../../types/pokeType';
 
 export async function fetchPokemons(): Promise<PokeInitial[]> {
     const response = await fetch(

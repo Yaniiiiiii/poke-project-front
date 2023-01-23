@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { fetchPokemons } from '../../services/pokeRepository';
+import { fetchPokemons } from '../../services/pokeRepository/pokeRepository';
 
 function SearchBar() {
     const initialState = '';

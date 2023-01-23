@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchPokemonDetails } from '../../services/pokeDetailsRepository';
+import { fetchPokemonDetails } from '../../services/pokeDetailsRepo/pokeDetailsRepository';
 import { pokeDetails } from '../../types/pokeType';
 
 function Details() {
