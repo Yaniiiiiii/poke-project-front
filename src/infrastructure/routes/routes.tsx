@@ -11,7 +11,7 @@ function AppRoutes() {
                 <Route path="/pokemons">
                     <Route index element={<MainPage></MainPage>}></Route>
                     <Route
-                        path=":id"
+                        path=":name"
                         element={<DetailsPage></DetailsPage>}
                     ></Route>
                 </Route>

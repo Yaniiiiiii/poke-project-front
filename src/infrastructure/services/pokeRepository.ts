@@ -1,4 +1,4 @@
-import Pokemon, { PokeInitial } from '../types/pokeType';
+import { PokeInitial, Pokemon } from '../types/pokeType';
 
 export async function fetchPokemons(): Promise<PokeInitial[]> {
     const response = await fetch(
@@ -14,7 +14,7 @@ export async function fetchPokemons(): Promise<PokeInitial[]> {
     const pokemons = result.results.map((pokemon: Pokemon) => ({
         name: pokemon.name,
         id: pokemon.national_number,
-        imgSrc: pokemon.sprites.normal.toLowerCase(),
+        imgSrc: pokemon.sprites.normal.toLocaleLowerCase(),
     }));
 
     const notRepeteatedPokemons = pokemons.filter(

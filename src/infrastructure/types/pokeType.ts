@@ -1,4 +1,4 @@
-type Pokemon = {
+export type Pokemon = {
     national_number: string;
     evolution: null;
     sprites: { normal: string; large: string; animated: string };
@@ -12,10 +12,18 @@ type Pokemon = {
     sp_def: number;
     speed: number;
 };
-export default Pokemon;
 
 export type PokeInitial = {
     name: string;
     id: string;
     imgSrc: string;
+};
+
+export type pokeDetails = {
+    name: string;
+    id: string;
+    imgSrc: string;
+    hp: number;
+    attack: number;
+    defense: number;
 };

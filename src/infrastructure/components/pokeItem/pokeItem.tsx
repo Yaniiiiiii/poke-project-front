@@ -6,7 +6,10 @@ function PokeItem({ pokemon }: { pokemon: PokeInitial }) {
         <li>
             <div>
                 {' '}
-                <Link to={'/pokemons/' + pokemon.id} key={pokemon.id}>
+                <Link
+                    to={'/pokemons/' + pokemon.name.toLowerCase()}
+                    key={pokemon.name}
+                >
                     <p>{pokemon.name}</p>
                     <img src={pokemon.imgSrc} alt={pokemon.name} />
                 </Link>
