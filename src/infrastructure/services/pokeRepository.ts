@@ -6,7 +6,7 @@ export async function fetchPokemons(): Promise<PokeInitial[]> {
     );
 
     if (!response.ok) {
-        throw new Error('Failed to fetch');
+        throw new Error('Failed to fetch pokemons');
     }
 
     const result = await response.json();
