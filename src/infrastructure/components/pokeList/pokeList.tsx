@@ -18,8 +18,11 @@ function PokeList() {
         fetchAllPokemons();
     }, []);
 
-    // const filteredPokemons = pokemons.slice(0,151).filter((pokemon) =>
-    // {return pokemon.name.toLocaleLowerCase().match(query.toLocaleLowerCase())) }
+    // const filteredPokemons = pokemons.slice(0, 151).filter((pokemon) => {
+    //     return pokemons[0].name
+    //         .toLocaleLowerCase()
+    //         .match(query.toLocaleLowerCase());
+    // });
 
     return isLoading || !pokemons ? (
         <Loading />

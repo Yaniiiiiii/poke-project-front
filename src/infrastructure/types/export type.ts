@@ -27,3 +27,7 @@ export type pokeDetails = {
     attack: number;
     defense: number;
 };
+export type queryProps = {
+    query: string;
+    setQuery: (query: string) => void;
+};

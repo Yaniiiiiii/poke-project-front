@@ -1,11 +1,13 @@
-import style from './header.module.css';
-
 export const Header = () => {
     return (
-        <>
-            <header className={style.header}>
-                <img src="./assets/logo.png" alt="pokemon"></img>
-            </header>
-        </>
+        <div>
+            <header className="container-fluid sticky-top row bg-danger mx-0 px-0">
+                <img
+                    src="./assets/logo.png"
+                    alt="pokemon"
+                    className="w-50 rounded mx-auto d-block py-3"
+                ></img>
+            </header>{' '}
+        </div>
     );
 };

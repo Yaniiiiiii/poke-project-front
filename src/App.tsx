@@ -4,6 +4,7 @@ import { LoginButton } from './infrastructure/components/logIn/login';
 import SearchBar from './infrastructure/components/searchBar/searchBar';
 import AppRoutes from './infrastructure/routes/routes';
 import { Auth0Provider } from '@auth0/auth0-react';
+import TopMenu from './infrastructure/components/menu/menu';
 
 function App() {
     return (
@@ -15,8 +16,7 @@ function App() {
             >
                 {' '}
                 <Header></Header>
-                <LoginButton></LoginButton>
-                <SearchBar></SearchBar>
+                <TopMenu></TopMenu>
                 <AppRoutes></AppRoutes>
             </Auth0Provider>
         </>

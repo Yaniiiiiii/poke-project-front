@@ -14,7 +14,7 @@ export function LoginButton() {
     return (
         <div>
             {!isAuthenticated && (
-                <button className="auth__button--logout" onClick={handleLogin}>
+                <button className="btn btn-primary" onClick={handleLogin}>
                     Login
                 </button>
             )}
@@ -23,10 +23,7 @@ export function LoginButton() {
                     <div className="auth">
                         <p className="auth__usermail">{user?.email}</p>
                     </div>
-                    <button
-                        className="auth__button--logout"
-                        onClick={handleLogout}
-                    >
+                    <button className="btn btn-danger" onClick={handleLogout}>
                         Logout
                     </button>
                 </>

@@ -1,4 +1,4 @@
-import { PokeInitial, Pokemon } from '../../types/pokeType';
+import { PokeInitial, Pokemon } from '../../types/export type';
 
 export async function fetchPokemons(): Promise<PokeInitial[]> {
     const response = await fetch(
@@ -17,6 +17,7 @@ export async function fetchPokemons(): Promise<PokeInitial[]> {
         imgSrc: pokemon.sprites.normal.toLocaleLowerCase(),
     }));
 
+    //FUNCTION TO FILTER REPEATED POKEMONS BROUGHT BY THE API
     const notRepeteatedPokemons = pokemons.filter(
         (pokemon: PokeInitial, index: number) =>
             pokemons.findIndex(
