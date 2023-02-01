@@ -1,7 +1,7 @@
 export const Header = () => {
     return (
         <div>
-            <header className="container-fluid sticky-top row bg-danger mx-0 px-0">
+            <header className="container-fluid fixed-top row bg-danger mx-0 px-0">
                 <img
                     src="./assets/logo.png"
                     alt="pokemon"

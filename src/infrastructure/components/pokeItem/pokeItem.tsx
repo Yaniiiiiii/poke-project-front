@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { PokeInitial } from '../../types/export type';
+import { PokeInitial } from '../../types/types';
 
 function PokeItem({ pokemon }: { pokemon: PokeInitial }) {
     return (
