@@ -1,4 +1,4 @@
-import { pokeDetails } from '../../types/export type';
+import { pokeDetails } from '../../types/types';
 
 export async function fetchPokemonDetails(name: string): Promise<pokeDetails> {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);

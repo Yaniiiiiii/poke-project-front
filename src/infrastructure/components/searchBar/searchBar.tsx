@@ -1,11 +1,7 @@
-import { useState } from 'react';
 import { fetchPokemons } from '../../services/pokeRepository/pokeRepository';
+import { queryProps } from '../../types/types';
 
-function SearchBar() {
-    const initialStateSearch = '';
-
-    const [query, setQuery] = useState(initialStateSearch);
-
+function SearchBar({ query, setQuery }: queryProps) {
     const handleInput = (event: any) => {
         event.preventDefault();
         if (query === '') fetchPokemons();
@@ -14,8 +10,8 @@ function SearchBar() {
 
     return (
         <>
-            <form>
-                <div className="input-group mb-3">
+            <form className="container-fluid sticky-top row bg-danger mx-0 px-0 ">
+                <div className="input-group mb-3 mt-3 border-5">
                     <input
                         type="text"
                         value={query}
@@ -25,13 +21,6 @@ function SearchBar() {
                         aria-label="Recipient's username"
                         aria-describedby="button-addon2"
                     ></input>
-                    <button
-                        className="btn btn-outline-primary -bg-subtle"
-                        type="button"
-                        id="button-addon2"
-                    >
-                        SEARCH
-                    </button>
                 </div>
             </form>
         </>
