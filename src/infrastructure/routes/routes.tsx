@@ -3,6 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 
 const MainPage = lazy(() => import('../components/pokeList/pokeList'));
 const DetailsPage = lazy(() => import('../components/details/details'));
+const FavoritePage = lazy(
+    () => import('../../features/components/favoriteList/favoriteList')
+);
 
 function AppRoutes() {
     return (
@@ -15,7 +18,12 @@ function AppRoutes() {
                         element={<DetailsPage></DetailsPage>}
                     ></Route>
                 </Route>
+                <Route
+                    path="/favoriteList"
+                    element={<FavoritePage></FavoritePage>}
+                ></Route>
                 <Route path="/" element={<MainPage></MainPage>}></Route>
+                <Route path="*" element={<MainPage></MainPage>}></Route>
             </Routes>
         </Suspense>
     );

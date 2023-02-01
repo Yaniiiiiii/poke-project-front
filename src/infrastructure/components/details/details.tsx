@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchPokemonDetails } from '../../services/pokeDetailsRepo/pokeDetailsRepository';
-import { pokeDetails } from '../../types/export type';
+import { pokeDetails } from '../../types/types';
 
 function Details() {
     const [pokemon, setPokemons] = useState<pokeDetails>();
@@ -17,17 +17,17 @@ function Details() {
 
     return (
         <>
-            <div>
-                <h2>{pokemon?.name.toLocaleUpperCase()}</h2>
+            <div className="mt-5 mx-4 d-flex flex-column align-items-center">
+                <h2 className="mt-2">{pokemon?.name.toLocaleUpperCase()}</h2>
+                <p>ID: {pokemon?.id}</p>
                 <img
                     src={pokemon?.imgSrc}
-                    width="100px"
+                    width="200px"
                     alt={pokemon?.name}
                 ></img>
-                <p>ID: {pokemon?.id}</p>
-                <p>HIT POINTS: {pokemon?.hp}</p>
-                <p>ATTACK: {pokemon?.attack}</p>
-                <p>DEFENSE: {pokemon?.defense}</p>
+                <p className="mb-3">Hit Points: {pokemon?.hp}</p>
+                <p className="mb-3">Attack: {pokemon?.attack}</p>
+                <p className="mb-3">Defense: {pokemon?.defense}</p>
             </div>
         </>
     );
