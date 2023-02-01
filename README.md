@@ -1,14 +1,16 @@
-# Pokemon Application
+# Proyecto Pokemons
 
-## Available Scripts
-In the project directory, you can run:
+Single Page Application de los Pokemons creada con React, Bootstrap y desplegada en Vercel. En la página principal de la web se muestra una lista con todos los pokemons cuya información detallada se puede acceder al darle click a cada una de las tarjetas, además incluye una barra de búsqueda.
 
-### `npm start`
-Runs the app in the development mode.\
+## Instalación
 
-### `npm test`
-Launches the test runner in the interactive watch mode.
+Para poder usar este proyecto necesitas tener instalado Node.js. Una vez hecho esto, descarga el repositorio y ejecuta los siguientes comandos en tu terminal.
 
-### `npm run build`
-Builds the app for production and optimizes the build for the best performance.
-Your app is ready to be deployed!
+```
+npm install
+npm start
+```
+
+## Uso
+
+Una vez ejecutado el comando de arriba, la web estará corriendo en tu navegador.
