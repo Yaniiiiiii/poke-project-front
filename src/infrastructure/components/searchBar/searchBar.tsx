@@ -10,8 +10,8 @@ function SearchBar({ query, setQuery }: queryProps) {
 
     return (
         <>
-            <form className="container-fluid fixed-top">
-                <div className="input-group mb-3">
+            <form className="container-fluid sticky-top row bg-danger mx-0 px-0 ">
+                <div className="input-group mb-3 mt-3 border-5">
                     <input
                         type="text"
                         value={query}

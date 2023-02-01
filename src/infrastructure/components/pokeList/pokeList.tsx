@@ -34,11 +34,13 @@ function PokeList() {
     ) : (
         <>
             <SearchBar query={query} setQuery={setQuery}></SearchBar>
-            {filteredPokemons.slice(0, 151).map((pokemon) => (
-                <ul key={pokemon.id}>
-                    <PokeItem pokemon={pokemon}></PokeItem>
-                </ul>
-            ))}
+            <div className="d-flex flex-row flex-wrap justify-content-center rounded-3 mt-5">
+                {filteredPokemons.slice(0, 151).map((pokemon) => (
+                    <ul className="list-inline px-3" key={pokemon.id}>
+                        <PokeItem pokemon={pokemon}></PokeItem>
+                    </ul>
+                ))}
+            </div>
         </>
     );
 }
